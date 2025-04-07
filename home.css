@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    direction: rtl;
+}
+
+/* الخلفية */
+header {
+    background: url('5893468641293354516.jpg') no-repeat 80% center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  nav a {
+    margin: 0 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #ffd700;
+  }
+
+/* المجموعات */
+.groups {
+    padding: 20px;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.image-slider {
+    display: flex;
+    gap: 15px;
+}
+
+/* مربعات الصور */
+.person {
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.person img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.person p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* تحسين التوافق مع الهاتف */
+@media (max-width: 600px) {
+    .person {
+        width: 100px;
+    }
+
+    .person img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .person p {
+        font-size: 12px;
+    }
+
+    #logo {
+        background-color: rgb(155, 44, 91) !important; /* خلفية خضراء */
+        padding: 20px; /* مسافة داخلية */
+        text-align: center; /* توسيط المحتوى */
+    }
+    
+    .video-container {
+        max-width: 800px; /* الحد الأقصى لعرض الفيديو */
+        width: 90%; /* اجعل العرض يستجيب للشاشة */
+        margin: 0 auto; /* توسيط الفيديو */
+    }
+    
+    .video-container video {
+        width: 100%; /* يجعل الفيديو يتمدد ليملأ الحاوية */
+        height: auto; /* يحافظ على التناسب */
+        border-radius: 10px; /* يجعل الزوايا مستديرة */
+    }
+
+    .team-link {
+        position: absolute;
+        top: 20px; /* المسافة من الأعلى */
+        right: 20px; /* المسافة من اليمين */
+        background-color: rgba(0, 0, 0, 0.7); /* لون خلفية المربع */
+        color: white; /* لون النص */
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    
+    .team-link:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+   
+    body {
+        background-color: white; /* غيّر اللون حسب رغبتك */
+    }
+
+   
+   
+    /* قسم الهيرو (الخلفية الرئيسية) */
+
+}

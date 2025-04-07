@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صفحة تسجيل الدخول</title>
+  <style>
+    /* تنسيق الصفحة */
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      direction: rtl; /* لجعل النصوص من اليمين إلى اليسار */
+    }
+    .login-container {
+      width: 300px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #fbf5f5;
+      border-radius: 3px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      color: #c2bfbf;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #45a049;
+    }
+    .error-message {
+      color: red;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .logo {
+        display: block;
+        width: 100px;
+        height: auto; /* يحافظ على الأبعاد الأصلية */
+        margin: 20px auto; /* توسيط اللوجو */
+      }
+
+    
+  </style>
+</head>
+<body>
+    <img src="photo_5877303836090155790_y.jpg" alt="لوجو" class="logo">
+
+  <div class="login-container">
+    <h2>تسجيل الدخول</h2>
+    <!-- نموذج تسجيل الدخول -->
+    <form id="loginForm">
+      <label for="username">اسم المستخدم:</label>
+      <!-- يمكن وضع أي اسم مستخدم -->
+      <input type="text" id="username" name="username" placeholder="ادخل اسم المستخدم" required>
+      
+      <label for="password">كلمة السر:</label>
+      <!-- كلمة السر الثابتة لجميع المستخدمين هي "elnor" -->
+      <input type="password" id="password" name="password" placeholder="ادخل كلمة السر" required>
+      
+      <div class="error-message" id="errorMessage"></div>
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+  </div>
+
+  
+
+  <script>
+    // عند تقديم النموذج، يتم التحقق من كلمة السر
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // منع إعادة تحميل الصفحة
+      
+      var password = document.getElementById('password').value;
+      // التحقق مما إذا كانت كلمة السر تساوي "elnor"
+      if (password === 'felo','emad','abona') {
+        // في حالة النجاح يتم توجيه المستخدم للصفحة التالية
+        window.location.href = 'home.html'; // تأكد من وجود الصفحة nextpage.html في نفس المجلد
+      } else {
+        // في حالة الخطأ يتم عرض رسالة تنبيه للمستخدم
+        document.getElementById('errorMessage').textContent = 'كلمة السر غير صحيحة!';
+      }
+    });
+  </script>
+
+</body>
+</html>
