@@ -86,20 +86,25 @@
   
 
   <script>
-    // عند تقديم النموذج، يتم التحقق من كلمة السر
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // منع إعادة تحميل الصفحة
-      
-      var password = document.getElementById('password').value;
-      // التحقق مما إذا كانت كلمة السر تساوي "elnor"
-      if (password === 'felo','emad','abona') {
-        // في حالة النجاح يتم توجيه المستخدم للصفحة التالية
-        window.location.href = 'home.html'; // تأكد من وجود الصفحة nextpage.html في نفس المجلد
-      } else {
-        // في حالة الخطأ يتم عرض رسالة تنبيه للمستخدم
-        document.getElementById('errorMessage').textContent = 'كلمة السر غير صحيحة!';
-      }
-    });
+    window.onload = function () {
+      const loginForm = document.getElementById("loginForm");
+      const passwordField = document.getElementById("password");
+      const errorMessage = document.getElementById("errorMessage");
+  
+      const validPasswords = ["felo", "emad", "abona"];
+  
+      loginForm.onsubmit = function (e) {
+        e.preventDefault();
+  
+        const enteredPassword = passwordField.value.trim();
+  
+        if (validPasswords.indexOf(enteredPassword) !== -1) {
+          window.location.href = "home.html";
+        } else {
+          errorMessage.textContent = "كلمة السر غير صحيحة!";
+        }
+      };
+    };
   </script>
 
 </body>
