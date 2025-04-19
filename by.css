@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.data-table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* رأس الجدول (العناوين) */
+.data-table th {
+    background-color: #007BFF;  /* أزرق */
+    color: white;               /* لون الخط أبيض */
+    padding: 10px;
+    text-align: center;
+}
+
+/* الخلايا (محتوى البيانات) */
+.data-table td {
+    background-color: #ffffff;  /* أبيض */
+    color: #000;                /* أسود */
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* صورة الشخص */
+.person-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
