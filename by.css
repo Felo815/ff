@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 20px;
 }
 
@@ -40,4 +40,11 @@ h1 {
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 20px auto;
 }
